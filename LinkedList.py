@@ -75,8 +75,8 @@ class linked_list:
             last_node = cur_node
             cur_node = cur_node.next
             if index==cur_idx:
-                insert_node.next = last_node.next
-                last_node.next = insert_node.next
+                insert_node.next = cur_node
+                last_node.next = insert_node
                 return None
             cur_idx += 1
 
