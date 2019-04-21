@@ -92,3 +92,22 @@ class linked_list:
                 last_node.next = cur_node.next
             else:
                 self.head = cur_node.next
+############################################################################################################################################################################################################
+# Testing Linked List Operations
+############################################################################################################################################################################################################
+
+my_list = linked_list()
+my_list.append(0)
+my_list.append(1)
+my_list.append(2)
+my_list.append(3)
+my_list.append(4)
+
+my_list.length()
+my_list.display_as_list()
+print("element at 2nd index {}".format(my_list.get(2)))
+
+# print("erase 2nd element of the list {}".format(my_list.erase(2)))
+my_list.display_as_list()
+print("insert 7 as 2nd element of the list\n".format(my_list.insert(2, data=7)))
+my_list.display_as_list()
