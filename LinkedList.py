@@ -81,6 +81,17 @@ class linked_list:
             cur_idx += 1
 
 
+    def delete(self, value):
+        cur_node = self.head
+        last_node = None
+        while cur_node.data != data and cur_node.next:
+            last_node = cur_node
+            cur_node = cur_node.next
+        if cur_node.value == value:
+            if last_node:
+                last_node.next = cur_node.next
+            else:
+                self.head = cur_node.next
 
 ############################################################################################################################################################################################################
 # Testing Linked List Operations
