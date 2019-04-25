@@ -1,5 +1,6 @@
 class Queue(object):
 	"Implementing a FIF0 type Queue using python Lists"
+
     def __init__(self, head=None):
         self.storage = [head]
 
