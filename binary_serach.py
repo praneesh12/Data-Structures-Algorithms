@@ -16,7 +16,4 @@ def binary_search_iterative(input_array, value):
     print('Search value {} not found'.format(value))
     return False
 
-
-
 binary_search_iterative(input_array=[1,2,3,4,5,7,8,9,12,22,34,36], value=6500)
-
