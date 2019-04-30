@@ -12,7 +12,9 @@ def Hanoi(n, src, dest, temp):
 	if n==1:
 		move_discs(src, dest)
 	else:
-		print(count)
 		Hanoi(n-1, src, temp, dest)
 		Hanoi(1, src, dest, temp)
 		Hanoi(n-1, temp, dest, src)
+
+if __name__=="__main__":
+	Hanoi(10, 'A', 'B', 'C')
