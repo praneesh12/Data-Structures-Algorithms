@@ -9,3 +9,5 @@ def fibbonacci(n):
 	# Recursion Case
 	else:
 		return fibbonacci(n-1) + fibbonacci(n-2)
+
+print(fibbonacci(3))
