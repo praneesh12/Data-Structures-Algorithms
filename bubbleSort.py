@@ -19,14 +19,6 @@ def bubbleSort(array):
 				swapped=True
 	return array
 
-# print('Array after sorting \n{}'.format(array))
-
 array = create_random_array()
-print(array)
-print(bubbleSort(array))
-
-
-
-
-
-
+print('Random array before sorting \n{}\n'.format(array))
+print('Random array after sorting \n{}'.format(bubbleSort(array)))
