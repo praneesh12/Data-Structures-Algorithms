@@ -12,69 +12,36 @@ print(new_array)
 # 		self.array_length = array_length
 
 
-def divide_array(array):
-	left_idx = 0
-	right_idx = len(array)-1
-
-	middle_idx = (left_idx + right_idx)//2
-	left_array = array[0:middle_idx]
-	right_array = array[middle_idx:]
-
-	return left_array, right_array
-
-def mergeSort(array):
+def merge(left_array, right_array):
 	merged_array = []
-	idx = 0
-	# first = 0
-	# last = len(array)-1
-	if len(array)==0 or len(array)==1:
+	i = 0
+	j=0
+	while (i < len(left_array)) and (j < len(left_array)):
+		if left_array[i] < right_array[j]:
+			merged_array.append(left_array[i])
+			i =+ 1
+		else:
+			merged_array.append(right_array[j])
+			j += 1
+	while (i < len(left_array)):
+		merged_array.append(left_array[i])
+		i += 1
+	while (j < len(right_array)):
+		merged_array.append(right_array[j])
+		j += 1
+
+	return merged_array
+
+def merge_sort(array):
+
+	if len(array) < 2:
 		return array
 	else:
-		left_array, right_array = divide_array(array)
-		while idx < len(left_array) or idx < len(left_array):
-			if left_array[idx] < right_array[idx]:
-				merged_array.append(left_array[idx])
-			else:
-				merged_array.append(right_array[idx])
-			idx += 1
-	return merged_array
-		
+		middle = len(array)//2
+		left_array = merge_sort(array[:middle])
+		print(left_array)
+		right_array = merge_sort(array[middle:])
+		print(right_array)
+		return merge(left_array, right_array)
 
-
-print(mergeSort(new_array))
-
-
-
-# def mergeSort(array):
-# 	# Step1: Break array into n subarrays where n is the length of the original array
-# 	# Each array is a sorted list
-# 	temp_array = ([[arr] for arr in array])
-
-# 	#Step2:Recursively compare array elements and merge them together till sorted array of length n is formed
-# 	# Recursion base case: 
-# 	swapped = True
-# 	merged_array = []
-# 	while swapped:
-# 		swapped=False
-# 		for i in range(len(temp_array)-1):
-# 			if array[i+1] < array[i]:
-# 				array[i],array[i+1] = array[i+1],array[i]
-# 				swapped=True
-
-# 	return array
-
-# new_array = create_random_array(length=10, maxint=50)
-# print('Randomized unsorted array \n{}'.format(new_array))
-# print(mergeSort(new_array))
-
-
-
-
-
-
-
-
-
-
-
-
+print(merge_sort(new_array))
