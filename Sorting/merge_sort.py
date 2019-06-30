@@ -4,6 +4,7 @@ def create_random_array(length=10, maxint=50):
 	return [randint(0, maxint) for _ in range(length)]
 
 new_array = create_random_array(length=3, maxint=50)
+print(new_array)
 
 # class sorting():
 # 	def __init__(algorith_name = None, array_length=10, randomized=True):
@@ -42,3 +43,5 @@ def merge_sort(array):
 		right_array = merge_sort(array[middle:])
 		print(right_array)
 		return merge(left_array, right_array)
+
+print(merge_sort(new_array))
