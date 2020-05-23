@@ -8,3 +8,34 @@ Input: heights = [1,1,4,2,1,3] Output: 3 Explanation: Current array : [1,1,4,2,1
 Input: heights = [5,1,2,3,4] Output: 5 Example 3:
 Input: heights = [1,2,3,4,5] Output: 0
 """
+
+class Solution():
+    def heightChecker(self, heights):
+        """
+        :type heights: List[int]
+        :rtype: int
+        """
+        from collections import Counter
+        dic = Counter(heights)
+        
+        start = 1
+        ans = 0
+        i = 0
+        
+        while i < len(heights):
+            freq = dic[start]
+            j = 0
+            while j < freq:
+                if heights[i] != start:
+                    ans += 1
+                j += 1
+                i += 1
+            start += 1
+        
+        return ans
+
+if __name__ == "__main__":
+	leetcode = Solution()
+	heights = [1,1,4,2,1,3]
+	minMoves = leetcode.heightChecker(heights)
+	print("Min moves: ", minMoves)
