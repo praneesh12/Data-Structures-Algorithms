@@ -30,4 +30,32 @@ def LCP(s1, s2):
         else: 
             return return_string
     
-    return return_string  
+    return return_string 
+
+
+
+search = strs[0]
+
+for i in range(len(strs)):
+    
+    search = LCP(search, strs[i])
+return search
+
+
+def LCP(s1, s2):
+    
+    i = 0
+    j = 0
+    returnString = ""
+    while i < len(s1) and j < len(s2):
+        
+        if s1[i] == s2[j]:
+            returnString += s2[i]
+            i+=1
+            j+=1
+        else:
+            returnString
+            
+    return returnString
+    
+            
