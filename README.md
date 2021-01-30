@@ -1,9 +1,13 @@
-# Data-Structures-Algorithms
-- Linked List
-- Lists
-- Queues
-- Stacks
-- Dictionary
-- Tree
+# Repo Structure
 
-- Interview Questions
+## DataStructures
+> Linked List
+> Lists
+> Queues
+> Stacks
+> Hash Map
+> Tree
+> Graphs
+
+## Algorithms 
+> Leetcode 
