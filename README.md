@@ -1,6 +1,7 @@
 # Repo Structure
 
-## DataStructures
+## DataStructures 
+Implementations of Data Structures with practice problems from educative.io
 >* Linked List
 >* Lists
 >* Queues
@@ -10,4 +11,9 @@
 >* Graphs
 
 ## Algorithms 
->* Leetcode 
+
+>* Leetcode-Top100
+>* Interview-Coding-Patterns
+>* Amazon
+>* Microsoft
+>* Quora
