@@ -1,4 +1,5 @@
 import time 
+import argparse
 
 def fib(num):
     """
@@ -58,10 +59,23 @@ def fibOpt(num):
 
 if __name__=="__main__":
     
-    num = 40
+    parser = argparse.ArgumentParser()
+    print("Input the number to calcluate fibonacci sequence")
+    parser.add_argument("--num", type=int, required=True)
+
+    args = parser.parse_args()
+    num = args.num
     seen = [-1]*(num+1)
-    
+ 
+    start_time = time.time() 
     fib(num)
+    print("fib(num)--- %s seconds ---" % (time.time() - start_time))
+ 
+    start_time = time.time()
     fibStack(num)
-    fib_seen(num,seen)
+    print("fibStack(num)--- %s seconds ---" % (time.time() - start_time))
+ 
+    start_time = time.time()
     fibOpt(num)
+    print("fibOpt(num)--- %s seconds ---" % (time.time() - start_time))
+  
